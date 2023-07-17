@@ -129,8 +129,8 @@ body {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
@@ -138,6 +138,7 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -151,8 +152,8 @@ body {
 .quote {
 	font-family: 'Spectral';
 	font-style: italic;
-	width: 70%;
-	margin: auto;
+	max-width: 1320px;
+	margin: 0 auto;
 	padding-block: 3em;
 }
 .quote__text {
@@ -225,8 +226,8 @@ body {
 }
 .form-container {
 	flex : 2;
-
 }
+
 form {
 	display: flex;
 	flex-direction: column;
