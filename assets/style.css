@@ -336,12 +336,14 @@ input[type="submit"] {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav, .top-header .nav ul {
+	.nav, .nav ul {
 		width: 100%;
-		padding: 0 0 0 0;
+		padding: 5px 0 0 5px;
+		display: flex;
+		justify-content: space-between;
 	}
 	.top-header .nav li {
-		flex: 1;
+		flex: none;
 		padding-block: 1em;
 		text-align: center;
 	}
