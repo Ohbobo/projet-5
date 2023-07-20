@@ -31,24 +31,31 @@ header {
 	align-items: center;
 }
 
-.top-header .name {
+.top-header__name {
 	font-size: 26px;
 }
 
-.nav ul {
+.link {
+	text-decoration: none;
+	color: #000;
+}
+
+.nav {
 	display: flex;
+	align-items: center;
+}
+
+.nav__items {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
-.nav li {
-	padding-inline: 10px;
-}
-
-.nav a {
-	text-decoration: none;
-	color: #000
+.nav__link:hover {
+	color: #BEB45A;
 }
 
 .social-link img {
@@ -105,7 +112,7 @@ header {
 }
 
 #gallery {
-	/*	min-height: 100vh; */
+ 	min-height: 100vh;
 }
 .title{
 	text-align: center;
@@ -117,7 +124,7 @@ header {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #000;
 	background-color: #BEB45A;
-	border-radius:0 ;
+	border-radius: 0;
 }
 .nav-pills .nav-link {
 	color: #000;
@@ -342,9 +349,8 @@ input[type="submit"] {
 	}
 	.nav, .nav ul {
 		width: 100%;
-		padding: 5px 0 0 5px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 	}
 	.top-header .nav li {
 		flex: none;
