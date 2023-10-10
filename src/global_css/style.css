@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap');
-
 *, ::before, ::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Inter';
-	font-style: normal;
 }
 
 html {
@@ -15,14 +11,44 @@ html {
 body {
 	max-width: 1920px;
 	margin: auto;
+	line-height: 1.5;
 }
 
 header {
 	position: sticky;
 	top:0;
-	z-index: 1000;
+	z-index: 50;
 }
+
+a, button {
+	font-family: 'Inter';
+	font-style: normal;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+	color: #212529;
+	font-family: 'Inter';
+	font-style: normal;
+}
+
+h2{
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+.h4, h4 {
+    font-size: 1.5rem;
+}
+
 .top-header {
+	height: 100px;
 	background-color: white;
 	display: flex;
 	justify-content: space-between;
@@ -65,10 +91,12 @@ header {
 
 #about {
 	display: flex;
+	gap: 20px;
 	background-color: #F6D2B8;
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	top: -2px;
 }
 
 .picture.left::before {
@@ -142,7 +170,6 @@ header {
 }
 
 .gallery-item {
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -198,7 +225,8 @@ header {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
+	max-width: 1290px;
+	margin: 0 auto;
 }
 
 .service {
@@ -223,6 +251,8 @@ header {
 
 #contact .container {
 	display: flex;
+	max-width: 1290px;
+	margin: 0 auto;
 }
 
 .picture.right::before {
@@ -237,6 +267,10 @@ header {
 }
 .form-container {
 	flex : 2;
+}
+
+.form-container p {
+	margin: 10px 0 10px 0;
 }
 
 form {
@@ -268,7 +302,25 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+@media all and (max-width: 1310px) {
+	#services .container {
+		width: 90%;
+	}
+}
+
 @media all and (max-width: 1180px) {
+	h2 {
+		font-size: calc(1.325rem + .9vw);
+	}
+
+	h3 {
+		font-size: calc(1.3rem + .6vw);
+	}
+
+	.h4, h4 {
+		font-size: calc(1.275rem + .3vw);
+	}
+
 	.picture {
 		flex : 2;
 	}
@@ -350,10 +402,11 @@ input[type="submit"] {
 	}
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 690px) {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
+		height: auto;
 	}
 	.nav, .nav ul {
 		width: 100%;
@@ -367,6 +420,13 @@ input[type="submit"] {
 	}
 	.picture.left::before, .picture.right::before {
 		height: 150px;
+	}
+	.picture-left img {
+		width: 250px;
+		height: 250px;
+	}
+	.about-me__title { 
+		font-size: 25px;
 	}
 	#services .container {
 		align-items: center;
